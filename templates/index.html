@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>American Sign Language Detection</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <header class="bg-primary text-center py-5 mb-4">
+        <div class="container">
+            <h1 class="font-weight-regular text-white">Sign Language Detection using YOLOv7</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <header class="bg-white text-center py-5 mb-4">
+            <div class="container" style="background-color: white">
+                <a href="/live" class="btn btn-primary btn-dark mx-auto">Live</a>
+            </div>
+        </header>
+
+        <form class="input-group upload-data row custom-row">
+            <div class="col-xl-6 col-md-6 col-sm-6">
+                <button type="button" class="btn btn-primary col-12" id="uload">Upload</button>
+            </div>
+            <div class="col-xl-6 col-md-6 col-sm-6">
+                <button id="send" type="button" class="btn btn-success col-12">Predict</button>
+            </div>
+            <input type="hidden" class="form-control mr-2" id="url" placeholder="Enter REST Api url..." value="../predict" />
+            <input name="upload" type="file" id="fileinput" style="position:absolute;top:-500px; display: none;" /><br />
+        </form>
+
+        <div class="row">
+            <div class="col-xl-6 col-md-6 col-sm-6 mb-6">
+                <div class="card border-0 shadow upload-image">
+                    <video autoplay id="video"
+                        poster="https://img.freepik.com/free-vector/group-young-people-posing-photo_52683-18824.jpg?size=338&ext=jpg"></video>
+                    <img src="" class="" id="photo">
+                    <canvas style="display:none;" id="canvas"></canvas>
+                </div>
+            </div>
+            <div class="col-xl-6 col-md-6 col-sm-6 mb-6">
+                <div class="card border-0 shadow res-part2">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-0">Prediction Results</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="loading">
+        <div class="loader"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
