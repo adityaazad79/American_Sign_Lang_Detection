@@ -19,7 +19,7 @@ pip install -r requirements.txt
 
 Join the spilitted model (Splitted due to GitHub size limit constraint of 50 MB)
 ```
-python yolov7/join_model.py
+cd yolov7/ && python join_model.py
 ```
 
 Run the Flask application to start the server.
