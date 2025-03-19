@@ -7,3 +7,4 @@ signLanguage/utils/__pycache__/main_utils.cpython-313.pyc
 yolov7/models/__pycache__/
 yolov7/traced_model.pt
 yolov7/utils/__pycache__/
+/data/
