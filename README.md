@@ -4,6 +4,9 @@
 
 - The application is built using Flask for the backend and integrates with YOLOv7 for real-time and image-based ASL detection.
 
+## Demo - Screenshots
+![Loading...](https://github.com/adityaazad79/American_Sign_Lang_Detection/blob/main/Demo/image?raw=true)
+
 ## Table of Contents
 - [Running the Application](#running-the-application)
 
